@@ -1,0 +1,41 @@
+class Feedback
+{
+private:
+int FeedbackID;
+int Rating;
+string Description;
+
+public:
+Feedback();
+Feedback(int FeedbackID, int Rating, string Description, CustomerServiceRepresentative * csr);
+void DisplayFeedback();
+~Feedback();
+};
+
+class Technician
+{
+private:
+int TechnicianID;
+string Name;
+string Email;
+CustomerServiceRepresentative * csr[3];
+
+
+
+
+public:
+Technician();
+Technician(int TechnicianID, string Name, string Email);
+void StoreTechnicianDetails();
+void DisplayTechnicianDetails();
+void InspectDetails();
+void FixCustomerIssues(int ProblemID, string Description, Problems*P);
+void addCSR(CustomerServiceRepresentative * csr1, CustomerServiceRepresentative*csr2, CustomerServiceRepresentative*csr3)
+{
+    csr[0]=csr1;
+    csr[1]=csr2;
+    csr[2]=csr3;
+
+}
+~Technician();
+};
