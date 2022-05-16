@@ -1,0 +1,49 @@
+class UnregisteredUser : public System
+{
+private:
+int UserID;
+
+public:
+UnregisteredUser();
+UnregisteredUser(int UserID, string Name, string Email, string DOB);
+void Register();
+void ProvideUserDetails();
+void ValidateUserDetails();
+void DisplayUserDetails();
+~UnregisteredUser();
+};
+
+
+class Transactions
+{
+private:
+int TransactionID;
+double Amount;
+string Transaction_Type;
+
+public:
+Transactions();
+Transactions(int TransactionID, double Amount, string Transaction_Type);
+void StoreTransactionDetails();
+void UpdateTransactionDetails();
+void DisplayTransactionDetails();
+~Transactions();
+};
+
+
+class Manager
+{
+private:
+int ManagerID;
+string Name;
+string Email;
+
+public:
+Manager();
+Manager(int ManagerID, string Name, string Email);
+void StoreManagerDetails();
+void DisplayManagerDetails();
+void ManageAccounts();
+void ProvideSupervision();
+~Manager();
+};
