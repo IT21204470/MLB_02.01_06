@@ -1,0 +1,55 @@
+class System 
+{
+protected:
+int Type;
+string Name;
+string Email;
+string DOB;
+ServiceID * SID;
+
+public:
+System();
+System(int Type);
+void ManageUserDetails();
+void ManageEmployeeDetails();
+void ManageServer()
+{
+    SID = new Services();
+}
+~System();
+};
+
+
+class RegisteredCustomer : public System
+{
+private:
+int CustomerID;
+int Age;
+string Address;
+string TelNo;
+TransactionID * TID;
+FeedbackID * FID;
+Problems * prb;
+Balance * blc;
+
+public:
+RegisteredCustomer();
+RegisteredCustomer(int CustomerID, int Age, string Name, string Email, string DOB, string Address, string TelNo);
+void Login();
+void ReportProblems();
+void RequestServices();
+void MakeTransactions()
+{
+    TID = new Transactions(); 
+}
+void ProvideFeedback()
+{
+    FID = new Feedback();
+}
+void UpdateProfileInformation();
+void UpdateAccountBalance()
+{
+    blc = new Balance();
+}
+~RegisteredCustomer();
+};
