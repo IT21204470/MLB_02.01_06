@@ -1,0 +1,47 @@
+class Services
+{
+private:
+int ServiceID;
+string Service_Type;
+string Service_Description;
+
+public:
+Services();
+Services(int ServiceID, string Service_Type, string Service_Description);
+void StoreServiceDetails();
+void DisplayServiceDetails();
+~Services();
+};
+
+class Accountant
+{
+private:
+int AccountantID;
+string Name;
+string Email;
+
+public:
+Accountant();
+Accountant(int AccountantID, string Name, string Email);
+void StoreAccountantDetails();
+void DisplayAccountantDetails();
+void ManageAccounts();
+void CheckAccounts();
+~Accountant();
+};
+
+class AdministrativeDepartment
+{
+private:
+int DepartmentID;
+string Hotline;
+string Email;
+
+public:
+AdministrativeDepartment();
+AdministrativeDepartment(int DepartmentID, string Hotline, string Email);
+void IntroduceLoanSchemes();
+void IntroduceAccountTypes(int Account_Type, Accounts*A);
+void IntroducePromotions();
+~AdministrativeDepartment();
+};
