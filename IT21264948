@@ -1,0 +1,49 @@
+class Problems
+{
+private:
+int ProblemID;
+string Description;
+
+public:
+Problems();
+Problems(int ProblemID, string Description);
+void StoreProblemDetails();
+void DisplayProblemDetails();
+~Problems();
+};
+
+class Accounts
+{
+private:
+int AccountNO;
+double Balance;
+string Account_Type;
+Manager * mgr;
+Accountant * act;
+
+
+public:
+Accounts();
+Accounts(int AccountNO, double Balance, string Account_Type);
+void StoreAccountDetails();
+void DisplayAccountDetails();
+void UpdateAccountBalance();
+~Accounts();
+};
+
+class CustomerServiceRepresentative
+{
+private:
+int CSRID;
+string Name;
+string Email;
+
+public:
+CustomerServiceRepresentative();
+CustomerServiceRepresentative(int CSRID, string Name, string Email);
+void StoreCSRDetails();
+void DisplayCSRDetails();
+void ResolveCustomerComplaints();
+~CustomerServiceRepresentative();
+};
+
